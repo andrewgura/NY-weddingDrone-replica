@@ -1,0 +1,28 @@
+.blue{
+  background-color:  blue !important;
+}
+
+.info-row  {
+    display: flex;
+    flex-direction: row;
+}
+.info-column {
+  width: 50%;
+    min-height: 300px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+@media (max-width: 400px) {
+    .info-row {
+
+        flex-direction: column;
+    }
+    .info-column {
+      width: 100%;
+    }
+    .info-row:nth-child(even) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+}
