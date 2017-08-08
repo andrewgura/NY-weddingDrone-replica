@@ -1,5 +1,18 @@
-.blue {
-  background-color: blue !important;
+.first {
+  background-image: url("/media/bean.png");
+}
+
+.second {
+  background-image: url("/media/river.png");
+}
+
+.third {
+  background-image: url("/media/shedd.png");
+}
+
+.info-bg {
+  background-size: cover;
+  background-position: center center;
 }
 
 .info-row {
@@ -22,7 +35,7 @@
     width: 100%;
   }
 
-  .info-row:nth-child(even) {
+  .info-row:nth-child(odd) {
     flex-direction: column-reverse;
     justify-content: flex-end;
   }
