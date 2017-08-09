@@ -2,16 +2,11 @@ body,
 html {
   height: 100%;
   color: white !important;
-  background: #2F4F4F;
+  background: white;
   font-size: 16px; }
 
-h1 {
-  margin-top: 0 !important; }
-
-.header-text {
-  font-family: "raleway";
-  font-weight: 600;
-  letter-spacing: 0.2rem; }
+body, h1, p {
+  font-family: 'Montserrat', sans-serif !important; }
 
 #Container {
   width: 100%;
@@ -25,7 +20,6 @@ h1 {
   left: 50%;
   top: 50%;
   background-color: #000;
-  /* The following will size the video to fit the full container. Not necessary, just nice.*/
   min-width: 100%;
   min-height: 100%;
   -webkit-transform: translate(-50%, -50%);
@@ -58,6 +52,30 @@ h1 {
   width: 600px;
   height: 250px; }
 
+#arrowContainer {
+  position: absolute;
+  bottom: 8%;
+  left: 0;
+  width: 100%;
+  text-align: center; }
+
+#arrowContainer span {
+  display: block; }
+
+nav {
+  display: inline-block;
+  padding: 32px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600; }
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
 .bg {
   width: 100%;
   height: 100px;
@@ -72,40 +90,33 @@ h1 {
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
 
-.fixed {
-  height: 70px !important;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 2; }
-
 ul {
   margin: -70px auto 0 !important;
   width: 500px; }
 
-li {
-  float: left;
+.navLink {
   list-style: none;
-  margin: 10px 20px;
+  padding: 5px;
+  margin: 5px 20px;
   text-transform: uppercase;
   letter-spacing: 4px;
-  color: white; }
+  color: white;
+  position: relative; }
+
+.navLink:visited, .navLink:hover, .navLink:active {
+  color: white;
+  text-decoration: none; }
 
 @media (max-width: 400px) {
-  li {
-    margin: 1.2rem 0.6%; } }
+  .navLink {
+    letter-spacing: 0;
+    padding: 2px;
+    margin: 2px; } }
 
-a {
-  text-decoration: none;
-  position: relative;
-  display: block; }
-
-.down {
-  top: 150px; }
-
-.up {
-  top: 1800px; }
+.about-contain {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color: black; }
 
 .first {
   background-image: url("/media/bean.png"); }
@@ -122,26 +133,27 @@ a {
 
 .info-row {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  background: #231f20; }
 
 .info-column {
+  min-height: 400px;
   width: 50%;
-  min-height: 300px;
-  border: 1px solid black;
-  padding: 5px; }
+  padding: 80px; }
 
 @media (max-width: 400px) {
   .info-row {
     flex-direction: column; }
   .info-column {
-    width: 100%; }
+    width: 100%;
+    min-height: 300px; }
   .info-row:nth-child(odd) {
     flex-direction: column-reverse;
     justify-content: flex-end; } }
 
 .video {
   display: flex;
-  background: gold;
+  background: url("https://www.theworkingmomstravels.com/wp-content/uploads/2012/12/dsc05720.jpg?w=1024");
   background-size: cover;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -172,7 +184,10 @@ iframe {
   width: 100%; }
 
 .contact {
-  background: silver; }
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2017/07/27/23/26/texture-2547191__340.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 60px 0; }
 
 .fa {
   padding: 20px;
@@ -203,7 +218,14 @@ iframe {
   color: white; }
 
 .contactFormSec {
-  background: orange; }
+  color: black;
+  margin-top: 80px;
+  margin-bottom: 80px; }
+
+form .btn {
+  margin-top: 30px;
+  border-radius: 5px;
+  padding: 10px 35px; }
 
 footer {
   padding-top: 30px;

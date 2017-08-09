@@ -18,23 +18,23 @@
 .info-row {
   display: flex;
   flex-direction: row;
+  background: #231f20;
 }
 
 .info-column {
+  min-height: 400px;
   width: 50%;
-  min-height: 300px;
-  border: 1px solid black;
-  padding: 5px;
+  padding: 80px;
 }
+
 @media (max-width: 400px) {
   .info-row {
     flex-direction: column;
   }
-
   .info-column {
     width: 100%;
+    min-height: 300px;
   }
-
   .info-row:nth-child(odd) {
     flex-direction: column-reverse;
     justify-content: flex-end;
