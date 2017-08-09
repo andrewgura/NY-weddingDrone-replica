@@ -2,6 +2,8 @@ var express = require('express');
 var exphbs = require('express-handlebars');
 var path = require('path');
 var sass = require('node-sass');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 
 var app = express();
 
@@ -24,6 +26,13 @@ app.use(require('node-sass-middleware')({
   indentedSyntax: true,
   sourceMap:true
 }));
+
+// BodyParser Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
+app.use(cookieParser());
 
 //
 //Set up static folder for imgs,styles

@@ -91,6 +91,41 @@
       });
     });
   </script>
+
+  <script>
+  var $form = $('.js-form');
+  var $formSuccess = $('.js-formSuccess');
+  var $formError = $('.js-formError');
+  var $submitBtn = $('.js-submitBtn');
+  var url = $form.attr('action');
+  var success = function(data) {
+    $form[0].reset();
+    $formSuccess.removeClass('u-isHidden')
+    $submitBtn.prop('disabled', false);
+  }
+  var error = function(error) {
+    $formError.removeClass('u-isHidden')
+    $submitBtn.prop('disabled', false);
+  }
+  $form.on('submit', function(evt) {
+    var data = $(this).serializeArray()
+    evt.preventDefault();
+    $submitBtn.prop('disabled', true);
+          $formSuccess.addClass('u-isHidden');
+          $formError.addClass('u-isHidden');
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: data,
+      success: success,
+      error: error,
+      dataType: 'json'
+    });
+  });
+</script>
+
+
+
 </body>
 
 </html>

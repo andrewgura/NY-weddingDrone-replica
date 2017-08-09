@@ -227,6 +227,12 @@ form .btn {
   border-radius: 5px;
   padding: 10px 35px; }
 
+.u-isHidden {
+  display: none; }
+
+.alert-msgs {
+  margin-top: 20px; }
+
 footer {
   padding-top: 30px;
   padding-bottom: 30px;
