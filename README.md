@@ -1,4 +1,4 @@
-agile-mountain-73108.herokuapp.com
+https://agile-mountain-73108.herokuapp.com/
 
 Contact form sends an email
 
