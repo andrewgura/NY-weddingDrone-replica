@@ -106,7 +106,8 @@ ul {
   text-transform: uppercase;
   letter-spacing: 4px;
   color: white;
-  position: relative; }
+  position: relative;
+  font-size: 12px; }
 
 .navLink:visited, .navLink:hover, .navLink:active {
   color: white;
@@ -116,7 +117,7 @@ ul {
   .navLink {
     letter-spacing: 0;
     padding: 2px;
-    margin: 2px; } }
+    margin: 1px; } }
 
 .about-contain {
   margin-top: 100px;
@@ -146,7 +147,7 @@ ul {
   width: 50%;
   padding: 80px; }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .info-row {
     flex-direction: column; }
   .info-column {
