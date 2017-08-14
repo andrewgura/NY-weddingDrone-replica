@@ -10,10 +10,10 @@ router.post('/contact', function(req, res) {
 
   var mailOpts, smtpTrans;
 
-  //email account for only this sample site, nothing to steal
   smtpTrans = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
+      //email address and that emails password, this sends the email
       user: "websitewebsite9@gmail.com",
       pass: "simple123"
     }
@@ -21,8 +21,8 @@ router.post('/contact', function(req, res) {
 
     mailOpts = {
       from: req.body.firstName + " " + req.body.email,
-      //plz dont spam me
-      to: "andrewgura94@gmail.com",
+      //email that receives the form post
+      to: "qaqiaq@gmail.com",
       subject: "Website Contact",
       text: req.body.firstName + " " + req.body.lastName + " " + req.body.email + " " + req.body.comments
     }

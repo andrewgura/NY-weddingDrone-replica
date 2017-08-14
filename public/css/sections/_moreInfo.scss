@@ -1,11 +1,14 @@
+//first image of more info section
 .first {
   background-image: url("/media/bean.png");
 }
 
+//second image of more info section
 .second {
   background-image: url("/media/river.png");
 }
 
+//third image of more info section
 .third {
   background-image: url("/media/shedd.png");
 }
@@ -27,7 +30,8 @@
   padding: 80px;
 }
 
-@media (max-width: 450px) {
+//Makes the layout have image ontop of text at smaller screen sizes
+@media (max-width: 780px) {
   .info-row {
     flex-direction: column;
   }
