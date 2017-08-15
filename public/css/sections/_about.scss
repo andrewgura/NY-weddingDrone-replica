@@ -3,3 +3,9 @@
   margin-bottom: 100px;
   color: black;
 }
+
+@media (min-width: 900px) {
+  .about-contain {
+    padding: 0 125px;
+  }
+}
