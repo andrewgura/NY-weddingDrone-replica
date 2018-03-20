@@ -14,15 +14,15 @@ router.post('/contact', function(req, res) {
     service: 'Gmail',
     auth: {
       //email address and that emails password, this sends the email
-      user: "websitewebsite9@gmail.com",
-      pass: "simple123"
+      user: "website6377@gmail.com",
+      pass: "Simple123"
     }
   });
 
     mailOpts = {
       from: req.body.firstName + " " + req.body.email,
       //email that receives the form post
-      to: "qaqiaq@gmail.com",
+      to: "website6377@gmail.com",
       subject: "Website Contact",
       text: req.body.firstName + " " + req.body.lastName + " " + req.body.email + " " + req.body.comments
     }
